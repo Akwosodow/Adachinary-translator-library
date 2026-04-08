@@ -45,7 +45,7 @@ def Morse(sentence: str) -> str:
 #fuck if I know what ts does bruh
 def InvBinary(sentence: list) -> str:
     newstring = ""
-    for i in sentence
+    for i in sentence:
         letters = [i[j:j+8] for j in range(0, len(i), 8)]
         newstring += "".join([chr(int(k, 2)) for k in letters])
         newstring += " "
@@ -89,7 +89,7 @@ def TheOtherWay(adactence: list) -> str:
 #CLI stuff:
 if __name__ == "__main__":
     string = input("Enter plaintext (all special characters will be ignored by the morse function): ")
-    print(Binary(string))
-    print(Morse(string))
+    print(Adachit(Binary(string)))
+    print(Adachit(Morse(string)))
     string = input("Enter adachi text: ")
     print(TheOtherWay(string))
