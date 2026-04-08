@@ -1,5 +1,5 @@
 # Adachinary-translator-library
-A python library to convert between text and "adachinary"
+A python library to convert between text and "adachinary" also adachi morse because why not
 
 ## What is adachinary
 
