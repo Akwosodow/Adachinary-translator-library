@@ -78,8 +78,6 @@ def TheOtherWay(adactence: list) -> str:
         newstring+= " "
 
     newarray = newstring.split()
-    print(newstring)
-    print(newarray)
     if len(newarray[0])%8==0:
         final = InvBinary(newarray)
     else:
