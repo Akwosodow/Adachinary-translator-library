@@ -11,7 +11,7 @@ def Adachit(sentence: str) -> str:
 
 #turns ASCII (ascdachii) characters into binary
 #so like you kinda have to tell people that when they go to translate
-#because it will not translate correctly in the translator's default setting
+#because it will not translate correctly on the online binary translator's default setting
 def Binary(sentence: str) -> str:
     newstring = ""
     for i in sentence:
