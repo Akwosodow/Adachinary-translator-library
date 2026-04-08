@@ -25,8 +25,11 @@ def Morse(sentence: str) -> str:
     #evil ass eval function :adachitroll:
     #this dict long as hell I don't wanna hardcode it
     #also it allows people to swap out the dictionary or smth idk
-    with open("./MorseDict.txt", "r") as file:
-        morseqiv = eval(file.read())    
+    try:
+        with open("./MorseDict.txt", "r") as file:
+            morseqiv = eval(file.read())
+    except:
+        return("Dawg you have no morse dictionary")
 
     newstring = ""
     for i in sentence:
@@ -49,8 +52,11 @@ def InvBinary(sentence: list) -> str:
     return(newstring)
 
 def InvMorse(sentence: list) -> str:
-    with open("./MorseDict.txt", "r") as file:
-        morseqiv = eval(file.read())
+    try:
+        with open("./MorseDict.txt", "r") as file:
+            morseqiv = eval(file.read())
+    except:
+        return("Dawg you have no morse dictionary")
     invmorseqiv = dict(map(reversed, morseqiv.items()))
     newstring = ""
 
@@ -80,10 +86,10 @@ def TheOtherWay(adactence: list) -> str:
         final = InvMorse(newarray)
     return(final)
 
-strin = "I am Completely Lost on TS fr fr PEAK"
-ballsmorse = Adachit(Morse(strin))
-ballsbinary = Adachit(Binary(strin))
-print(TheOtherWay(ballsbinary), TheOtherWay(ballsmorse))
-
-        
-
+#CLI stuff:
+if __name__ == "__main__":
+    string = input("Enter plaintext (all special characters will be ignored by the morse function): ")
+    print(Binary(string))
+    print(Morse(string))
+    string = input("Enter adachi text: ")
+    print(TheOtherWay(string))
